@@ -1,6 +1,6 @@
- ?뱞 Paper Reviews
+# 📄 Paper Reviews
 
-> **AI-ResearchLab ????쇰Ц ?λ떎?대툕 由щ럭 ??μ냼**
+> **AI-ResearchLab 팀의 논문 딥다이브 리뷰 저장소**
 
 [![Last Review](https://img.shields.io/github/last-commit/AI-ResearchLab/paper-reviews?label=last%20review)](https://github.com/AI-ResearchLab/paper-reviews/commits/main)
 ![Reviews](https://img.shields.io/badge/reviews-0-blue)
@@ -8,28 +8,29 @@
 
 ---
 
-## ?렞 ???덊룷??臾댁뾿?멸???
+## 🎯 이 레포는 무엇인가요?
 
-?⑥닚???쇰Ц ?붿빟???꾨떃?덈떎.  
-"**??以묒슂?쒓?**", "**?ㅻТ???대뼸寃??????덈뒗媛**"?쇰뒗 ???愿?먯씠 ?닿릿 ?λ떎?대툕 遺꾩꽍 紐⑥쓬?낅땲??
+단순한 논문 요약이 아닙니다.  
+"**왜 중요한가**", "**실무에 어떻게 쓸 수 있는가**"라는 팀의 관점이 담긴 딥다이브 분석 모음입니다.
 
-- ?뱦 **?좎젙 湲곗?**: ?몃젋???곹뼢??쨌 湲곗닠??李몄떊??쨌 ?ㅼ슜 媛?μ꽦
-- ?봽 **二쇨린**: 寃⑹＜ ~ ??1??(???濡쒗뀒?댁뀡)
-- ?뱤 **由щ럭 源딆씠**: 諛⑸쾿濡?쨌 ?ㅽ뿕 寃곌낵 쨌 ?쒓퀎 쨌 ? ?몄궗?댄듃源뚯?
+- 📌 **선정 기준**: 트렌드 영향력 · 기술적 참신함 · 실용 가능성
+- 🔄 **주기**: 격주 ~ 월 1회 (팀원 로테이션)
+- 📊 **리뷰 깊이**: 방법론 · 실험 결과 · 한계 · 팀 인사이트까지
 
 ---
 
-## ?뱴 由щ럭 紐⑸줉
+## 📚 리뷰 목록
 
 <!-- REVIEW_INDEX_START -->
-### 2026??7??*(泥?踰덉㎏ 由щ럭瑜?湲곕떎由щ뒗 以?..)*
+### 2026년 7월
+*(첫 번째 리뷰를 기다리는 중...)*
 <!-- REVIEW_INDEX_END -->
 
 ---
 
-## ?뾺截?遺꾨쪟
+## 🗂️ 분류
 
-| 移댄뀒怨좊━ | ?쒓렇 |
+| 카테고리 | 태그 |
 |---------|------|
 | LLM | `#llm` `#pretraining` `#finetuning` `#alignment` |
 | Agent | `#agent` `#planning` `#tool-use` `#memory` |
@@ -40,13 +41,14 @@
 
 ---
 
-## ?랃툘 由щ럭 ?묒꽦 諛⑸쾿
+## ✍️ 리뷰 작성 방법
 
-1. **?댁뒋 ?깅줉** ??`paper-review` ?쒗뵆由우쑝濡??쇰Ц ?꾨낫 ?쒖븞
-2. **釉뚮옖移??앹꽦** ??`review/?대쫫-?쇰Ц?쎌뼱` (?? `review/parkjs-memgpt`)
-3. **[TEMPLATE.md](./TEMPLATE.md)** 蹂듭궗 ??`YYYY-MM/YYYY-MM-DD-?쒕ぉ?쎌뼱.md`濡????4. **PR ?앹꽦** ?????1紐?由щ럭 ??癒몄?
+1. **이슈 등록** → `paper-review` 템플릿으로 논문 후보 제안
+2. **브랜치 생성** → `review/이름-논문약어` (예: `review/parkjs-memgpt`)
+3. **[TEMPLATE.md](./TEMPLATE.md)** 복사 → `YYYY-MM/YYYY-MM-DD-제목약어.md`로 저장
+4. **PR 생성** → 팀원 1명 리뷰 → 머지
 
-**?뚯씪紐??덉떆**:
+**파일명 예시**:
 ```
 2026-07/2026-07-15-agent-memory-survey.md
 2026-07/2026-07-29-efficient-kv-cache.md
@@ -54,25 +56,24 @@
 
 ---
 
-## ?뫁 由щ럭???꾪솴
+## 👥 리뷰어 현황
 
-| ???| ?꾨즺 由щ럭 | 愿??遺꾩빞 |
+| 팀원 | 완료 리뷰 | 관심 분야 |
 |------|---------|---------|
-| @??? | 0 | LLM 쨌 Agent |
-| @??? | 0 | RAG 쨌 Retrieval |
-| @??? | 0 | Multimodal 쨌 Vision |
-| @??? | 0 | Efficiency 쨌 Inference |
+| @팀원1 | 0 | LLM · Agent |
+| @팀원2 | 0 | RAG · Retrieval |
+| @팀원3 | 0 | Multimodal · Vision |
+| @팀원4 | 0 | Efficiency · Inference |
 
 ---
 
-## ?뱦 李멸퀬 ?먮즺
+## 📌 참고 자료
 
-- [arXiv CS.AI](https://arxiv.org/list/cs.AI/recent) ??理쒖떊 ?쇰Ц ?먯깋
-- [Papers With Code](https://paperswithcode.com/) ??SOTA 鍮꾧탳 諛?援ы쁽 肄붾뱶
-- [Semantic Scholar](https://www.semanticscholar.org/) ???몄슜 愿怨??먯깋
-- [AI-ResearchLab weekly-trends](https://github.com/AI-ResearchLab/weekly-trends) ??二쇨컙 ?몃젋?쒖뿉??由щ럭 ?꾨낫 諛쒓뎬
+- [arXiv CS.AI](https://arxiv.org/list/cs.AI/recent) — 최신 논문 탐색
+- [Papers With Code](https://paperswithcode.com/) — SOTA 비교 및 구현 코드
+- [Semantic Scholar](https://www.semanticscholar.org/) — 인용 관계 탐색
+- [AI-ResearchLab weekly-trends](https://github.com/AI-ResearchLab/weekly-trends) — 주간 트렌드에서 리뷰 후보 발굴
 
 ---
 
-*?뱷 [由щ럭 ?묒꽦 媛?대뱶](./CONTRIBUTING.md) 쨌 [?쒗뵆由?(./TEMPLATE.md) 쨌 [?댁뒋 ?깅줉](https://github.com/AI-ResearchLab/paper-reviews/issues/new/choose)*
-
+*📝 [리뷰 작성 가이드](./CONTRIBUTING.md) · [템플릿](./TEMPLATE.md) · [이슈 등록](https://github.com/AI-ResearchLab/paper-reviews/issues/new/choose)*
