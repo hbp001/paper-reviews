@@ -1,0 +1,58 @@
+name: 🔄 Sync reviews to website
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '20*/*.md'
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📥 Checkout paper-reviews
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: 🔍 Find changed review files
+        id: changed
+        run: |
+          BASE=$(git rev-parse HEAD^ 2>/dev/null || echo 4b825dc642cb6eb9a060e54bf8d69288fbee4904)
+          FILES=$(git diff --name-only --diff-filter=d "$BASE" HEAD -- '20*/*.md' | tr '\n' ' ')
+          echo "files=$FILES" >> "$GITHUB_OUTPUT"
+          echo "변경된 리뷰 파일: $FILES"
+
+      - name: 🟢 Setup Node.js
+        if: steps.changed.outputs.files != ''
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: 🔨 리뷰를 웹사이트 형식으로 변환
+        if: steps.changed.outputs.files != ''
+        run: node scripts/sync-to-site.js ./_synced ${{ steps.changed.outputs.files }}
+
+      - name: 📥 Checkout ai-researchlab.github.io
+        if: steps.changed.outputs.files != ''
+        uses: actions/checkout@v4
+        with:
+          repository: AI-ResearchLab/ai-researchlab.github.io
+          token: ${{ secrets.SITE_DEPLOY_TOKEN }}
+          path: site
+
+      - name: 📤 웹사이트 레포에 커밋 & push
+        if: steps.changed.outputs.files != ''
+        run: |
+          cp ./_synced/*.md site/content/surveys/
+          cd site
+          git config user.name "paper-reviews-bot"
+          git config user.email "actions@github.com"
+          git add content/surveys/
+          if git diff --cached --quiet; then
+            echo "변경사항 없음"
+          else
+            git commit -m "chore: sync review(s) from paper-reviews"
+            git push
+          fi

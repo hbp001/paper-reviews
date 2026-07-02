@@ -34,6 +34,17 @@ feat: add review - [논문 제목 약어]
     docs: update README review index
 ```
 
+## 웹사이트 자동 동기화
+
+`YYYY-MM/*.md` 리뷰 파일이 `main`에 merge되면 `.github/workflows/sync-to-site.yml`이
+자동으로 `scripts/sync-to-site.js`로 front matter 형식을 변환해
+`ai-researchlab.github.io` 레포의 `content/surveys/`에 바로 push합니다.
+별도 작업 없이 merge만 하면 몇 분 안에 `https://ai-researchlab.github.io/survey/`에 반영됩니다.
+
+TEMPLATE.md의 `**arXiv**`, `**저자**`, `**발표**`, `**카테고리**`, `**리뷰어**`, `**리뷰 날짜**`,
+`## 1️⃣ 한 줄 요약`, `## 7️⃣ 관련 자료`(공식 코드 링크) 형식을 그대로 지켜서 작성해야
+변환 스크립트가 정상적으로 값을 추출합니다.
+
 ## README 인덱스 업데이트
 
 머지 후 `README.md`의 `<!-- REVIEW_INDEX_START -->` 섹션에 새 리뷰 링크를 추가하세요.
